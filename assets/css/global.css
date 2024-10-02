@@ -11,6 +11,9 @@ input, button, textarea, select { font: inherit }
 
 /* ================= ENDS ================ */
 
+/* ====== PADDING AROUND WEB PAGE BODY CONTENT ======  */
+body { padding: 4% 20% }
+
 body {
     text-align: center;
     font-family: sans-serif;
