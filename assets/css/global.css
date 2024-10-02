@@ -8,6 +8,8 @@ body { line-height: 1.5; min-height: 100vh }
 @media (min-width: 768px ) { body { text-rendering: optimizeLegibility } }
 img { width: 100%; height: auto; display: block }
 input, button, textarea, select { font: inherit }
+
+body { background-color: lightgreen; }
 /* Desktops */
 @media (min-width: 768px) {
     body { padding: 4% 20% }
@@ -56,3 +58,5 @@ p {
     font-size: 20px;
     margin-bottom: 16px;
 }
+
+a { color: darkgreen; }

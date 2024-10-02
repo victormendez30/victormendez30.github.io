@@ -9,6 +9,8 @@ body { line-height: 1.5; min-height: 100vh }
 img { width: 100%; height: auto; display: block }
 input, button, textarea, select { font: inherit }
 
+body { background-color: lightblue; }
+
 /* Desktops */
 @media (min-width: 768px) {
     section { padding: 4% 20% }
@@ -24,6 +26,7 @@ section { padding: 4% 20% }
 section *:last-child { margin-bottom: 0 !important }
 
 h2 {
+    color: blue;
     font-size: 56px;
     margin-bottom: 4px;
 }
@@ -37,3 +40,5 @@ p {
     font-size: 24px;
     margin-bottom: 16px
 }
+
+a { color: blue; }
