@@ -229,7 +229,7 @@ input, button, textarea, select { font: inherit }
 
 body { background-color: lightblue; }
 .section-1{
-    background-color: lemonchiffon;
+    background-color: var(--trend-300);
 
 }
 .section-2{
