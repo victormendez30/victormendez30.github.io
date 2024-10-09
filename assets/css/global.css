@@ -60,3 +60,9 @@ p {
 }
 
 a { color: darkgreen; }
+
+img{
+    margin-bottom: 42px;
+    border-radius: 15px;
+    box-shadow: 8px 10px 8px #888;
+}
