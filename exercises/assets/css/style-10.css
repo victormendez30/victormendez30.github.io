@@ -4,15 +4,33 @@
 html { height: 100%; font-size: 100%; font: inherit; vertical-align: baseline;
 scroll-behavior: smooth; scroll-padding-top: 20px }
 body { line-height: 1.5; min-height: 100vh }
-img { width: 100%; height: auto; display: block }
-input, button, textarea, select { font: inherit }
 @media (max-width: 767px ) { body { text-rendering: optimizeSpeed } }
 @media (min-width: 768px ) { body { text-rendering: optimizeLegibility } }
+img { width: 100%; height: auto; display: block }
+input, button, textarea, select { font: inherit }
+
 
 /* ============ CUSTOM PROPERTIES ============  */
 
 :root {
- 
+
+    /* Alternatives to default sans-serif font */
+--font-sans: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell, Droid Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Emoji, Segoe UI Symbol, Lucida Grande, Helvetica, Arial, sans-serif;
+
+/* Alternatives to default serif font */
+--font-serif: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+
+/* Alternatives to default monospace font */
+--font-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+--fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
+--fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
+--fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
+--fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
+--fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
+--fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
+--fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
+
 
     /* Color variables */
     --black-000: #000000;
@@ -227,71 +245,124 @@ input, button, textarea, select { font: inherit }
     --trend-700: #2c4763;
     --trend-800: #1f364d;
     --trend-900: #0e2439;
+
+
 }
 
-/* ================= ENDS ================ */
+/* Global font */
+body { font-family: var(--font-sans) }
 
 
-/* SECTIONS */
+/*  ====================== SECTIONS ======================== */
 
-/* Padding around content */
-@media (min-width: 1025px) { section { padding: 4% 14% } }
-@media (min-width: 768px) and (max-width: 1024px) { section { padding: 5% 12% } }
-@media (max-width: 767px) { section { padding: 32px 9% 32px 9% } }
+/* Padding around content: desktops / laptops */
+@media (min-width: 1025px) { section { padding: 60px 4% } }
+/* Padding around content: tablets */
+@media (min-width: 768px) and (max-width: 1024px) { section { padding: 50px 6% } }
+/* Padding around content: mobiles */
+@media (max-width: 767px) { section { padding: 42px 9% 42px 9% } }
 
-/* ==== Headings ==== */
+/* Under last content item, zero the bottom margin */
+section > *:last-child { margin-bottom: 0 !important }
 
-h1 {
-	font-family: sans-serif;
-	font-size: 64px;
-    text-align: center;
-    letter-spacing: -1px;
-    margin-bottom: 64px;
+/* When content width < large viewport width, equalise spacing at left and right */
+section > * { max-width: 1600px; margin-left: auto; margin-right: auto }
+
+/* Max content widths: classes for narrow content */
+section.w-820px >  * { max-width: 820px }
+section.w-1024px > * { max-width: 1024px }
+section.w-1140px > * { max-width: 1140px }
+section.w-1356px > * { max-width: 1356px }
+
+
+/* ============= SINGLE COLUMN LAYOUT ============ */
+
+/* Typography */
+section h2, section h3 { line-height: 1.2 }
+section h2 {
+    font-weight: 700;
+	letter-spacing: -1px;
 }
 
-h3 {
-	font-family: sans-serif;
-	font-size: 28px;
-    margin-bottom: 2px;
+@media (min-width: 768px) {
+    section h2 { margin-bottom: 32px }
 }
 
-/* Paragraphs of text */
-p {
-	font-family: sans-serif;
-    font-size: 20px;
-    color: #696969;
-    line-height: 1.7
+@media (max-width: 768px) {
+    section h2 { margin-bottom: 18px }
 }
 
-/* Div selector with properties and values */
+section h2 span { color: var(--gray-600); }
 
-div{
-    padding: 12px;
-    margin-bottom: 40px;
-    width: 25%
-}
-.bono {
-    background-color: #4081ec;
-    }
+@media (min-width: 768px) { section h3 { margin-top: 48px; margin-bottom: 4px } }
+@media (max-width: 768px) { section h3 { margin-top: 32px; margin-bottom: 2px } }
 
-.edge {
-    background-color: #ffbb33;
+section p {
+    line-height: 1.7;
+	margin-bottom: 1em;
 }
 
-.adam {
-    background-color: #f73345;
+/* Badges */
+section .badge span {
+	display: inline-block;
+	padding: 2px 10px;
+	font-weight: 700;
+	letter-spacing: 2px;
 }
 
-.larry {
-    background-color: #e0e0e0;
+@media (min-width: 768px) { section .badge { margin-bottom: 42px } }
+@media (max-width: 767px) { section .badge { margin-bottom: 24px } }
+
+/* Horizontal alignment */
+.text-center { text-align: center; margin-left: auto; margin-right: auto }
+
+/* Fixed font sizes */
+section div span { font-size: var(--fs-base) }
+
+section h2 { font-size: var(--fs-xl) }
+
+section h3 { font-size: var(--fs-lg) }
+
+section p { font-size: var(--fs-md) }
+
+.section-selector-1 { background-color: #000 }
+.section-selector-1 .badge span { 
+    background-color: #fff; color: #000;
+    font-size: var(--fs-sm);
 }
+.section-selector-1 h2, .section-selector-1 p { color: #fff }
+.section-selector-1 h2 { letter-spacing: 1px }
+.section-selector-1 h2 span { color: var(--amber-400) }
 
-.bono h3,
-.bono p,
-.adam h3,
-.adam p { color: #fff }
+.section-selector-2 {
+    background-image: linear-gradient(90deg, var(--sky-100), var(--sky-300))
+ }
+ .section-selector-2 h2 { letter-spacing: 1px }
+ .section-selector-2 h2 span { color: var(--red-600) }
 
-.edge h3,
-.edge p,
-.larry h3,
-.larry p { color: #000 }
+ .section-selector-3 { background-color: var(--yellow-300) }
+.section-selector-3 h2 { font-weight: 400 }
+.section-selector-3 h2 span { font-weight: 700; color: #000 }
+
+.section-selector-4 { background-color: var(--trend-800) }
+.section-selector-4 .badge span {
+    background-color: transparent;
+    color: var(--sky-400);
+}
+.section-selector-4 h2 { 
+    color: #fff;
+    font-family: var(--font-monospace);
+    font-size: var(--fs-xxl);
+ }
+.section-selector-4 p { color: var(--gray-200) }
+
+.section-selector-5 { background-color: var(--trend-050) }
+.section-selector-5 p { color: var(--gray-700) }
+
+.section-selector-6 { background-color: var(--purple-200) }
+.section-selector-6 h2 {
+    letter-spacing: 3px;
+    color: var(--blue-800);
+    font-size: var(--fs-xxxl);
+}
+.section-selector-6 h2 span { color: var(--red-600) }
