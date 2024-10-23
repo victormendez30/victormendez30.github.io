@@ -368,7 +368,7 @@ section p { font-size: var(--fs-md) }
 .section-selector-5 p { color: var(--gray-700) }
 .section-selector-5 h2,
 .section-selector-5 h3,
-.section-selector-5 p{ font-family: 'Playfair Display', var(--font-sans) }
+.section-selector-5 p { font-family: 'Playfair Display', var(--font-sans) }
 
 .section-selector-6 { background-color: var(--purple-200) }
 .section-selector-6 h2 {
