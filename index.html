@@ -5,19 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Armando Nunes ID 74491 | Home Page</title>
     <meta name="description" content="Welcome to my website that showcases some of my digital creations.">
+<link rel="preload" href="assets/videos/programming-img.jpg" as="image">
 <link rel="stylesheet" href="assets/css/global.css">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">    
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">    
 <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">    
 <link rel="manifest" href="assets/img/favicon/site.webmanifest">
 
+<!-- Google Fonts -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <h1>Hi, I am Victor Mendez</h1>
-    <h2>Computer Science Student</h2>
-    <img src="assets/img/pexels-technobulka-10816120.jpg" alt="Code Screen">
+    <header>
 
-<h3>Sample Web Pages</h3>
+        <div class="hero-text-container">
+            <h1 class="slide-in-top">Hi, I am Victor Mendez</h1>
+            <h2 class="slide-in-left">Computer Science Student</h2>
+        </div>
+
+        <div class="hero-bg-media">
+            <video loop playsinline muted autoplay poster="assets/videos/programming-video.mp4" class="background-video" disablepictureinpicture preload="auto"> 
+                <source src="assets/videos/programming-video.mp4" type="video/mp4">
+            </video>   
+        </div>
+
+        <div class="bg-overlay"></div>
+
+        
+
+    </header>
+
+    <h3>Sample Web Pages</h3>
 
 
 <p><a href="exercises/page-1.html">A Tale of Two Cities</a></p>
@@ -34,4 +56,5 @@
 <p><a href="exercises/hero-image.html">Hero block with background image</a></p> 
 <p><a href="exercises/hero-video.html">Hero block with background video</a></p> 
 </body>
+
 </html>
