@@ -248,7 +248,7 @@ h1, h2, h3, h4, p, li { word-break: break-word; hyphens: auto }
 
 /* Global font */
 body { font-family: var(--global-font);
-    background-image: linear-gradient(90deg, Purple, orange);
+    background-color: var(--trend-600);
     position:relative;
 }
 
